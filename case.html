@@ -1,36 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sherlock Doggs - Blog</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sherlock Doggs - Blog</title>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<style>
+  /* Копия стилей из index.html */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background-color: #1c1c1c;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #ddd;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  header h1 i {
+    color: #888;
+  }
+  nav a {
+    color: #bbb;
+    margin-left: 1.8rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.25s ease;
+  }
+  nav a:hover,
+  nav a:focus {
+    color: #fff;
+  }
+  main {
+    max-width: 900px;
+    margin: 2rem auto 4rem;
+    padding: 0 1.5rem;
+    flex-grow: 1;
+  }
+  h2 {
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+  }
+  article.blog-post {
+    background: #1e1e1e;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.7);
+  }
+  article.blog-post h3 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    color: #ddd;
+  }
+  article.blog-post time {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  article.blog-post p {
+    font-size: 1.1rem;
+    color: #ccc;
+  }
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1><i class="fas fa-dog"></i> Sherlock Doggs</h1>
-    <nav>
-      <a href="index.html">About Me</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="case.html">Blog</a>
-    </nav>
-  </header>
-  <main>
-    <h2>My Detective Blog</h2>
-    <article>
-      <h3>The Mystery of the Midnight Meow</h3>
-      <p>Turns out it was the neighbour's cat watching ghost documentaries at night!</p>
-    </article>
-    <article>
-      <h3>The Biscuit Bandit</h3>
-      <p>A daring heist in the kitchen! The culprit? A squirrel with a sweet tooth.</p>
-    </article>
-    <article>
-      <h3>The Pawprint Puzzle</h3>
-      <p>Unusual pawprints in the garden? Solved using my mud analysis toolkit.</p>
-    </article>
-  </main>
-  <footer>
-    <p>&copy; 2025 Sherlock Doggs</p>
-  </footer>
+<header>
+  <h1><i class="fas fa-dog"></i> Sherlock Doggs</h1>
+  <nav>
+    <a href="index.html"><i class="fas fa-user"></i> About Me</a>
+    <a href="reviews.html"><i class="fas fa-comments"></i> Reviews</a>
+    <a href="case.html"><i class="fas fa-blog"></i> Blog</a>
+  </nav>
+</header>
+<main>
+  <h2>Detective Blog</h2>
+
+  <article class="blog-post" tabindex="0">
+    <h3>The Curious Case of the Missing Biscuit</h3>
+    <time datetime="2025-07-01">July 1, 2025</time>
+    <p>
+      Today, a mysterious theft shook the neighborhood – the beloved biscuit jar vanished
+      from Mrs. Poodle’s kitchen. Using my keen nose and sharp instincts, I traced the
+      crumbs to a surprisingly sneaky rabbit. Case closed with a wag of approval!
+    </p>
+  </article>
+
+  <article class="blog-post" tabindex="0">
+    <h3>Why Chess and Detective Work Go Paw in Paw</h3>
+    <time datetime="2025-06-20">June 20, 2025</time>
+    <p>
+      Strategic thinking is essential in both chess and investigations. Every move
+      counts, and anticipating your opponent's plan can lead to a swift checkmate or
+      the solving of a complex case. Here’s how I apply chess strategies to crack
+      mysteries.
+    </p>
+  </article>
+
+  <article class="blog-post" tabindex="0">
+    <h3>Top Tips for Staying Sharp on the Streets of London</h3>
+    <time datetime="2025-06-05">June 5, 2025</time>
+    <p>
+      Walking the city not only keeps me fit but also hones my senses. I share some
+      tips on how to stay alert, observe subtle clues, and keep your nose to the
+      ground—literally!
+    </p>
+  </article>
+</main>
+<footer>
+  &copy; 2025 Sherlock Doggs Detective Agency
+</footer>
 </body>
 </html>

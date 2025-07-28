@@ -1,5 +1,9 @@
 /* style.css */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,7 +19,10 @@ header {
   align-items: center;
   justify-content: space-between;
   color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 header h1 {
@@ -24,32 +31,34 @@ header h1 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  letter-spacing: 1.5px;
 }
 
 header nav a {
   color: #eee;
-  margin-left: 1.5rem;
+  margin-left: 1.8rem;
   text-decoration: none;
   font-weight: 600;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
 header nav a:hover {
-  color: #ffa500; /* оранжевый при наведении */
+  color: #ffa500; /* оранжевый */
 }
 
 main {
   max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  margin: 2rem auto 4rem;
+  padding: 0 1.2rem;
 }
 
 .profile-img {
   width: 200px;
   border-radius: 12px;
-  box-shadow: 0 0 10px #ffa500;
+  box-shadow: 0 0 15px #ffa500;
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .about p, .hobby p, .review p, article p {
@@ -66,54 +75,64 @@ main {
 .hobby {
   flex: 1 1 250px;
   background: #222;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(255, 165, 0, 0.3);
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.hobby:hover {
+  transform: scale(1.05);
 }
 
 .hobby img {
   width: 100%;
-  max-width: 150px;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
+  max-width: 160px;
+  border-radius: 10px;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 0 10px #ffa500;
 }
 
 .review {
   background: #222;
-  padding: 1rem;
+  padding: 1rem 1.3rem;
   margin-bottom: 1.5rem;
-  border-radius: 8px;
+  border-radius: 12px;
   display: flex;
-  gap: 1rem;
+  gap: 1.3rem;
   align-items: center;
-  box-shadow: 0 0 8px rgba(255, 165, 0, 0.3);
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.review:hover {
+  background-color: #333;
 }
 
 .review img {
-  width: 80px;
+  width: 90px;
   border-radius: 50%;
-  box-shadow: 0 0 5px #ffa500;
+  box-shadow: 0 0 10px #ffa500;
 }
 
 article {
   background: #222;
-  padding: 1rem;
+  padding: 1.2rem;
   margin-bottom: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(255, 165, 0, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+article:hover {
+  box-shadow: 0 0 25px #ffa500;
 }
 
 footer {
   background-color: #000;
   color: #aaa;
   text-align: center;
-  padding: 1rem 0;
-  margin-top: 3rem;
+  padding: 1.2rem 0;
+  margin-top: 4rem;
   font-size: 0.9rem;
-}
-
-/* Иконки */
-.fas.fa-dog {
-  color: #ffa500;
-}

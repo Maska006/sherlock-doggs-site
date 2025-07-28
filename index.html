@@ -9,88 +9,121 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 />
 <style>
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
   body {
     margin: 0;
-    background-color: #121212;
-    color: #eee;
+    background-color: #1e1e1e;
+    color: #ddd;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   header {
-    background-color: #000;
+    background-color: #111;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.8);
     position: sticky;
     top: 0;
     z-index: 10;
   }
   header h1 {
+    font-weight: 700;
     font-size: 1.8rem;
+    color: #fff;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    letter-spacing: 1.5px;
   }
   header h1 i {
-    color: #ffa500;
+    color: #f0a500;
   }
   nav a {
-    color: #eee;
+    color: #ccc;
     margin-left: 1.8rem;
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-    transition: color 0.3s ease;
+    gap: 0.3rem;
+    transition: color 0.25s ease;
   }
-  nav a:hover {
-    color: #ffa500;
+  nav a:hover,
+  nav a:focus {
+    color: #f0a500;
   }
   main {
-    max-width: 900px;
+    max-width: 850px;
     margin: 2rem auto 4rem;
-    padding: 0 1.2rem;
+    padding: 0 1.5rem;
+    flex-grow: 1;
   }
+  /* Profile image */
   .profile-img {
-    width: 200px;
+    width: 180px;
     border-radius: 12px;
-    box-shadow: 0 0 15px #ffa500;
+    box-shadow: 0 6px 15px rgba(240,165,0,0.4);
     display: block;
     margin-bottom: 1.5rem;
+    object-fit: cover;
   }
+  /* About text */
   .about p {
     font-size: 1.1rem;
+    margin-bottom: 1rem;
   }
+  /* Hobbies grid */
   .hobbies {
-    margin-top: 2rem;
-    display: flex;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
     gap: 2rem;
-    flex-wrap: wrap;
   }
   .hobby {
-    flex: 1 1 250px;
-    background: #222;
+    background: #2a2a2a;
     padding: 1.2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255,165,0,0.4);
+    border-radius: 14px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.25s ease;
   }
-  .hobby:hover {
-    transform: scale(1.05);
+  .hobby:hover,
+  .hobby:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(240,165,0,0.6);
   }
   .hobby img {
-    width: 100%;
-    max-width: 160px;
-    border-radius: 10px;
-    margin-bottom: 0.7rem;
-    box-shadow: 0 0 10px #ffa500;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+  }
+  .hobby h3 {
+    color: #f0a500;
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+  }
+  .hobby p {
+    color: #ccc;
+    font-size: 1rem;
+    margin: 0;
+  }
+  /* Footer for spacing if needed */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #666;
   }
 </style>
 </head>
@@ -104,28 +137,39 @@
   </nav>
 </header>
 <main>
-  <img src="images/Detective.jpeg" alt="Sherlock Doggs" class="profile-img" />
-  <section class="about">
-    <p>Hello! I'm Sherlock Doggs, your dedicated private detective with a keen nose for solving mysteries in London and beyond.</p>
-    <p>My skills include tracking, observation, and deduction. I combine my sharp instincts with some unique hobbies that sharpen my mind and keep me sharp:</p>
+  <img
+    src="images/Detective.jpeg"
+    alt="Sherlock Doggs - Private Detective"
+    class="profile-img"
+  />
+  <section class="about" tabindex="0">
+    <p>
+      Hello! I'm Sherlock Doggs, your dedicated private detective with a keen nose for solving mysteries in London and beyond.
+    </p>
+    <p>
+      My skills include tracking, observation, and deduction. I combine my sharp instincts with some unique hobbies that sharpen my mind and keep me sharp:
+    </p>
   </section>
-  <section class="hobbies">
-    <div class="hobby">
+  <section class="hobbies" aria-label="Sherlock Doggs hobbies">
+    <article class="hobby" tabindex="0">
       <img src="images/Walking.jpeg" alt="Walking around London" />
       <h3><i class="fas fa-walking"></i> Walking around London</h3>
       <p>Exploring the streets helps me notice details others might miss.</p>
-    </div>
-    <div class="hobby">
+    </article>
+    <article class="hobby" tabindex="0">
       <img src="images/Reading.jpeg" alt="Reading books" />
       <h3><i class="fas fa-book"></i> Reading books</h3>
       <p>Expanding my knowledge and learning about human nature improves my case-solving skills.</p>
-    </div>
-    <div class="hobby">
+    </article>
+    <article class="hobby" tabindex="0">
       <img src="images/Chess.jpeg" alt="Playing chess" />
       <h3><i class="fas fa-chess"></i> Playing chess</h3>
       <p>Strategic thinking from chess helps me plan my investigations carefully.</p>
-    </div>
+    </article>
   </section>
 </main>
+<footer>
+  &copy; 2025 Sherlock Doggs Detective Agency
+</footer>
 </body>
 </html>

@@ -15,21 +15,21 @@
   }
   body {
     margin: 0;
-    background-color: #1e1e1e;
-    color: #ddd;
+    background-color: #121212;
+    color: #e0e0e0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5;
+    line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
   header {
-    background-color: #111;
+    background-color: #1c1c1c;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.8);
+    border-bottom: 1px solid #333;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -37,16 +37,16 @@
   header h1 {
     font-weight: 700;
     font-size: 1.8rem;
-    color: #fff;
+    color: #ddd;
     display: flex;
     align-items: center;
     gap: 0.5rem;
   }
   header h1 i {
-    color: #f0a500;
+    color: #888;
   }
   nav a {
-    color: #ccc;
+    color: #bbb;
     margin-left: 1.8rem;
     text-decoration: none;
     font-weight: 600;
@@ -58,72 +58,80 @@
   }
   nav a:hover,
   nav a:focus {
-    color: #f0a500;
+    color: #fff;
   }
   main {
-    max-width: 850px;
+    max-width: 900px;
     margin: 2rem auto 4rem;
     padding: 0 1.5rem;
     flex-grow: 1;
   }
-  /* Profile image */
   .profile-img {
     width: 180px;
     border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(240,165,0,0.4);
+    box-shadow: 0 0 15px 2px #333;
     display: block;
     margin-bottom: 1.5rem;
     object-fit: cover;
   }
-  /* About text */
-  .about p {
-    font-size: 1.1rem;
+  section {
+    margin-bottom: 2.5rem;
+  }
+  h2 {
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.3rem;
     margin-bottom: 1rem;
+    color: #ccc;
+  }
+  p, li {
+    font-size: 1.1rem;
+    color: #ddd;
+  }
+  ul {
+    padding-left: 1.4rem;
+  }
+  /* Contact details */
+  .contacts i {
+    margin-right: 0.5rem;
+    color: #888;
+    width: 18px;
+    text-align: center;
   }
   /* Hobbies grid */
   .hobbies {
-    margin-top: 3rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap: 2rem;
   }
   .hobby {
-    background: #2a2a2a;
+    background: #1e1e1e;
     padding: 1.2rem;
-    border-radius: 14px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.7);
     text-align: center;
-    transition: transform 0.25s ease;
-  }
-  .hobby:hover,
-  .hobby:focus-within {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(240,165,0,0.6);
   }
   .hobby img {
     width: 130px;
     height: 130px;
     object-fit: cover;
-    border-radius: 14px;
+    border-radius: 12px;
     margin-bottom: 0.8rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.7);
   }
   .hobby h3 {
-    color: #f0a500;
-    font-size: 1.3rem;
-    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #ccc;
+    margin-bottom: 0.5rem;
   }
   .hobby p {
-    color: #ccc;
+    color: #aaa;
     font-size: 1rem;
     margin: 0;
   }
-  /* Footer for spacing if needed */
   footer {
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
-    color: #666;
+    color: #555;
   }
 </style>
 </head>
@@ -142,30 +150,60 @@
     alt="Sherlock Doggs - Private Detective"
     class="profile-img"
   />
-  <section class="about" tabindex="0">
+  <section aria-label="About Sherlock Doggs">
+    <h2>About Me</h2>
     <p>
-      Hello! I'm Sherlock Doggs, your dedicated private detective with a keen nose for solving mysteries in London and beyond.
+      Greetings! I'm <strong>Sherlock Doggs</strong>, a private detective with over <strong>7 years of experience</strong
+      > in cracking London's toughest cases. With a sharp nose and an even sharper mind, I specialize in surveillance,
+      mystery solving, and bringing truth to light.
     </p>
     <p>
-      My skills include tracking, observation, and deduction. I combine my sharp instincts with some unique hobbies that sharpen my mind and keep me sharp:
+      My skills include:
+    </p>
+    <ul>
+      <li>Advanced tracking and scent detection</li>
+      <li>Expert observation and deduction</li>
+      <li>Interrogation with a calm and friendly approach</li>
+      <li>Utilizing modern technology for investigations</li>
+    </ul>
+    <p>
+      Based in London, I am always ready to take on challenging cases that require persistence, intelligence, and a
+      touch of canine intuition.
     </p>
   </section>
-  <section class="hobbies" aria-label="Sherlock Doggs hobbies">
-    <article class="hobby" tabindex="0">
-      <img src="images/Walking.jpeg" alt="Walking around London" />
-      <h3><i class="fas fa-walking"></i> Walking around London</h3>
-      <p>Exploring the streets helps me notice details others might miss.</p>
-    </article>
-    <article class="hobby" tabindex="0">
-      <img src="images/Reading.jpeg" alt="Reading books" />
-      <h3><i class="fas fa-book"></i> Reading books</h3>
-      <p>Expanding my knowledge and learning about human nature improves my case-solving skills.</p>
-    </article>
-    <article class="hobby" tabindex="0">
-      <img src="images/Chess.jpeg" alt="Playing chess" />
-      <h3><i class="fas fa-chess"></i> Playing chess</h3>
-      <p>Strategic thinking from chess helps me plan my investigations carefully.</p>
-    </article>
+
+  <section aria-label="Contact Information">
+    <h2>Contact Me</h2>
+    <p class="contacts">
+      <i class="fas fa-phone"></i> +44 20 7946 0958
+    </p>
+    <p class="contacts">
+      <i class="fas fa-envelope"></i> sherlock.doggs@detective.co.uk
+    </p>
+    <p class="contacts">
+      <i class="fas fa-map-marker-alt"></i> Baker Street, London, UK
+    </p>
+  </section>
+
+  <section aria-label="Hobbies and how they help">
+    <h2>Hobbies &amp; How They Help My Work</h2>
+    <div class="hobbies">
+      <article class="hobby" tabindex="0">
+        <img src="images/Walking.jpeg" alt="Walking around London" />
+        <h3><i class="fas fa-walking"></i> Walking around London</h3>
+        <p>Exploring diverse neighborhoods trains my senses and helps me spot unusual activities.</p>
+      </article>
+      <article class="hobby" tabindex="0">
+        <img src="images/Reading.jpeg" alt="Reading books" />
+        <h3><i class="fas fa-book"></i> Reading books</h3>
+        <p>Studying psychology and criminology sharpens my understanding of human behavior.</p>
+      </article>
+      <article class="hobby" tabindex="0">
+        <img src="images/Chess.jpeg" alt="Playing chess" />
+        <h3><i class="fas fa-chess"></i> Playing chess</h3>
+        <p>Strategic thinking from chess helps me plan my investigations effectively.</p>
+      </article>
+    </div>
   </section>
 </main>
 <footer>

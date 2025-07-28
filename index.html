@@ -3,113 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Sherlock Doggs</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <title>Sherlock Doggs – Private Detective</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-awesome-kit.js" crossorigin="anonymous"></script>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Montserrat', sans-serif;
       margin: 0;
-      background-color: #fefefe;
+      padding: 0;
+      background-color: #f6f6f6;
       color: #333;
     }
     header {
-      background-color: #222;
-      color: white;
+      background-color: #111;
+      color: #fff;
       padding: 1rem 2rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
-    nav a {
-      color: white;
+    header nav a {
+      color: #fff;
       text-decoration: none;
-      margin: 0 1rem;
+      margin-left: 1rem;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-    h2, h3 {
-      color: #444;
+    h1 {
+      font-size: 2rem;
+    }
+    .profile-pic {
+      max-width: 200px;
+      border-radius: 12px;
+      float: right;
+      margin-left: 2rem;
+    }
+    .section {
+      margin-bottom: 2rem;
     }
     ul {
       padding-left: 1.2rem;
     }
-    li {
-      margin-bottom: 0.6rem;
+    .hobbies {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
-    img.profile {
-      max-width: 200px;
-      border-radius: 1rem;
-      float: right;
-      margin-left: 1rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .footer {
+    .hobby {
+      flex: 1 1 30%;
       text-align: center;
+    }
+    .hobby img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      background-color: #111;
+      color: white;
       padding: 1rem;
-      background: #222;
-      color: #fff;
-      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>🐶 Sherlock Doggs</h1>
+    <div><strong>🐶 Sherlock Doggs</strong></div>
     <nav>
-      <a href="index.html"><i class="fa-solid fa-user"></i> About Me</a>
-      <a href="reviews.html"><i class="fa-solid fa-comments"></i> Reviews</a>
-      <a href="case.html"><i class="fa-solid fa-newspaper"></i> Blog</a>
+      <a href="index.html">About Me</a>
+      <a href="reviews.html">Client Reviews</a>
+      <a href="case.html">Blog</a>
     </nav>
   </header>
 
   <div class="container">
-    <img src="Detective.jpeg" alt="Detective Dog" class="profile" />
+    <img src="images/Detective.jpeg" alt="Sherlock Doggs" class="profile-pic">
+    <div class="section">
+      <h1>🐶 Sherlock Doggs – Private Detective</h1>
+      <p><em>"If the trail is cold, I sniff harder."</em></p>
+      <h2>👤 Who Am I?</h2>
+      <p>My name is Sherlock Doggs, a private investigator with an exceptional nose and a nose for trouble.  
+      From missing socks to stolen tuna sandwiches, no mystery is too small — or too strange — for me to solve.  
+      When others give up, I dig in (literally, sometimes).</p>
+    </div>
 
-    <h2>🐾 Sherlock Doggs – Private Detective</h2>
-    <p><em>"If the trail is cold, I sniff harder."</em></p>
+    <div class="section">
+      <h2>🧠 My Skills:</h2>
+      <ul>
+        <li>👃 <strong>Super Sniffer:</strong> I can detect 87 types of guilt and 43 brands of sausages.</li>
+        <li>👂 <strong>Ears Like a Hawk (but furrier):</strong> I hear whispers three blocks away.</li>
+        <li>🕵️ <strong>Instincts Sharper Than My Teeth:</strong> Lies, secrets, and hidden snacks — nothing escapes me.</li>
+        <li>🐾 <strong>Master of Observation:</strong> I sit. I stare. I know everything.</li>
+      </ul>
+    </div>
 
-    <h3>👤 Who Am I?</h3>
-    <p>
-      My name is Sherlock Doggs, a private investigator with an exceptional nose — and an even better sense of humor.  
-      From missing socks to stolen tuna sandwiches, no mystery is too small or too weird for me to sniff out.  
-      When others give up, I dig in (literally, sometimes into the garden).
-    </p>
+    <div class="section">
+      <h2>📬 Contact Me:</h2>
+      <ul>
+        <li>🐾 Barking hours: 9am–7pm (unless I'm chasing squirrels)</li>
+        <li>📞 Phone: +44 123 456 789</li>
+        <li>📧 Email: sherlock@doggsdetective.com</li>
+        <li>📍 Location: 221B Barking Street, London</li>
+      </ul>
+    </div>
 
-    <h3>🧠 My Skills:</h3>
-    <ul>
-      <li>👃 <strong>Super Sniffer:</strong> I can detect 87 types of guilt and 43 brands of sausages. Sometimes simultaneously.</li>
-      <li>👂 <strong>Ears Like a Hawk (but furrier):</strong> I hear whispers three blocks away — especially if they mention treats.</li>
-      <li>🕵️ <strong>Instincts Sharper Than My Teeth:</strong> Lies, secrets, and hidden snacks — nothing escapes me.</li>
-      <li>🐾 <strong>Master of Observation:</strong> I sit. I stare. I judge. Mostly the mailman.</li>
-    </ul>
-
-    <h3>📬 Contact Me:</h3>
-    <ul>
-      <li>🐾 <strong>Barking hours:</strong> 9am–7pm (unless I'm chasing squirrels)</li>
-      <li>📞 <strong>Phone:</strong> +44 123 456 789</li>
-      <li>📧 <strong>Email:</strong> sherlock@doggsdetective.com</li>
-      <li>📍 <strong>Location:</strong> 221B Barking Street, London</li>
-    </ul>
-
-    <h3>🎾 My Hobbies (That Help My Work):</h3>
-    <ul>
-      <li><strong>Walking around London:</strong> I know every suspicious corner and where the best snacks are stashed.</li>
-      <li><strong>Reading books:</strong> Especially crime novels — my tail wags hardest at plot twists.</li>
-      <li><strong>Playing chess:</strong> I think five moves ahead... and sometimes chew the pawns if I lose.</li>
-    </ul>
-
-    <p><em>"Every hobby sharpens the mind — and sometimes, the teeth."</em></p>
+    <div class="section">
+      <h2>🎾 My Hobbies (That Help My Work):</h2>
+      <div class="hobbies">
+        <div class="hobby">
+          <img src="images/Walking.jpeg" alt="Walking">
+          <p><strong>Walking around London:</strong> I know every suspicious corner and where all the best snacks are hidden.</p>
+        </div>
+        <div class="hobby">
+          <img src="images/Reading.jpeg" alt="Reading">
+          <p><strong>Reading books:</strong> Especially crime novels. My tail wags at plot twists.</p>
+        </div>
+        <div class="hobby">
+          <img src="images/Chess.jpeg" alt="Playing chess">
+          <p><strong>Playing chess:</strong> I think five moves ahead — and chew the pawns if I lose.</p>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="footer">
-    &copy; 2025 Sherlock Doggs Investigations
-  </div>
+  <footer>
+    🐾 Sherlock Doggs © 2025 – Solving mysteries one bark at a time.
+  </footer>
 </body>
 </html>
+

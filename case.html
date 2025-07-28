@@ -1,48 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sherlock Doggs – Case of the Day</title>
+  <meta charset="UTF-8" />
+  <title>Sherlock Doggs - Blog</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <style>
-    body { font-family: Arial, sans-serif; background-color: #fefefe; color: #333; line-height: 1.6; }
-    header, footer { background-color: #222; color: white; text-align: center; padding: 1em; }
-    nav a { margin: 0 1em; color: white; text-decoration: none; }
-    section { padding: 2em; max-width: 800px; margin: auto; }
-    .entry { margin-bottom: 2em; border-bottom: 1px solid #ccc; padding-bottom: 1em; }
-    h2, h3 { color: #444; }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Case of the Day</h1>
-    <nav>
-      <a href="index.html">About Me</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="case.html">Case of the Day</a>
-    </nav>
-  </header>
-
-  <section>
-    <div class="entry">
-      <h3>The Case of the Barking Sandwich</h3>
-      <p>Mrs. Poodle reported a suspicious BLT barking in her fridge. Turned out her neighbor's Pomeranian snuck in to nap on the lettuce. Case closed with a wag and a snack.</p>
-    </div>
-
-    <div class="entry">
-      <h3>The Mystery of the Missing Ball</h3>
-      <p>Ball vanished mid-fetch. Lab assistant (a Labrador) was devastated. After three hours of intense sniffing, we found the ball in the cat's litter box. The cat denies everything. I believe him... not.</p>
-    </div>
-
-    <div class="entry">
-      <h3>The Squeaky Intruder</h3>
-      <p>3 AM. House in chaos. Family awoke to high-pitched squeaking. Everyone suspected mice. It was the toddler’s rubber duck... hiding under the couch. I interrogated it. It squeaked again. Suspicious.</p>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Sherlock Doggs Investigations
-  </footer>
-
-</body>
-</html>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fcfdff;
+      color: #333;
+      margin: 0; padding: 0;
+    }
+    header {
+      background-color: #2d3436;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+    nav {
+      background: #0984e3;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #74b9ff;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #0984e3;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+    article {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1rem;
+    }
+    article:last-child {
+      border-bottom: none;
+    }
+    article h3 {
+      margin-top: 0;
+      color: #2d3436;
+    }
+    article p {
+      font-size: 1.1rem;
+      line-height: 1.

@@ -1,213 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sherlock Doggs - About Me</title>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-/>
-<style>
-  /* Reset and base */
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  header {
-    background-color: #1c1c1c;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #333;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  header h1 {
-    font-weight: 700;
-    font-size: 1.8rem;
-    color: #ddd;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  header h1 i {
-    color: #888;
-  }
-  nav a {
-    color: #bbb;
-    margin-left: 1.8rem;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    transition: color 0.25s ease;
-  }
-  nav a:hover,
-  nav a:focus {
-    color: #fff;
-  }
-  main {
-    max-width: 900px;
-    margin: 2rem auto 4rem;
-    padding: 0 1.5rem;
-    flex-grow: 1;
-  }
-  .profile-img {
-    width: 180px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px 2px #333;
-    display: block;
-    margin-bottom: 1.5rem;
-    object-fit: cover;
-  }
-  section {
-    margin-bottom: 2.5rem;
-  }
-  h2 {
-    border-bottom: 2px solid #444;
-    padding-bottom: 0.3rem;
-    margin-bottom: 1rem;
-    color: #ccc;
-  }
-  p, li {
-    font-size: 1.1rem;
-    color: #ddd;
-  }
-  ul {
-    padding-left: 1.4rem;
-  }
-  /* Contact details */
-  .contacts i {
-    margin-right: 0.5rem;
-    color: #888;
-    width: 18px;
-    text-align: center;
-  }
-  /* Hobbies grid */
-  .hobbies {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 2rem;
-  }
-  .hobby {
-    background: #1e1e1e;
-    padding: 1.2rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.7);
-    text-align: center;
-  }
-  .hobby img {
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 0.8rem;
-  }
-  .hobby h3 {
-    font-weight: 600;
-    color: #ccc;
-    margin-bottom: 0.5rem;
-  }
-  .hobby p {
-    color: #aaa;
-    font-size: 1rem;
-    margin: 0;
-  }
-  footer {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #555;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Sherlock Doggs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #fefefe;
+      color: #333;
+    }
+    header {
+      background-color: #222;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h2, h3 {
+      color: #444;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    img.profile {
+      max-width: 200px;
+      border-radius: 1rem;
+      float: right;
+      margin-left: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
+      color: #fff;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <h1><i class="fas fa-dog"></i> Sherlock Doggs</h1>
-  <nav>
-    <a href="index.html"><i class="fas fa-user"></i> About Me</a>
-    <a href="reviews.html"><i class="fas fa-comments"></i> Reviews</a>
-    <a href="case.html"><i class="fas fa-blog"></i> Blog</a>
-  </nav>
-</header>
-<main>
-  <img
-    src="images/Detective.jpeg"
-    alt="Sherlock Doggs - Private Detective"
-    class="profile-img"
-  />
-  <section aria-label="About Sherlock Doggs">
-    <h2>About Me</h2>
+  <header>
+    <h1>🐶 Sherlock Doggs</h1>
+    <nav>
+      <a href="index.html"><i class="fa-solid fa-user"></i> About Me</a>
+      <a href="reviews.html"><i class="fa-solid fa-comments"></i> Reviews</a>
+      <a href="case.html"><i class="fa-solid fa-newspaper"></i> Blog</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <img src="Detective.jpeg" alt="Detective Dog" class="profile" />
+
+    <h2>🐾 Sherlock Doggs – Private Detective</h2>
+    <p><em>"If the trail is cold, I sniff harder."</em></p>
+
+    <h3>👤 Who Am I?</h3>
     <p>
-      Greetings! I'm <strong>Sherlock Doggs</strong>, a private detective with over <strong>7 years of experience</strong
-      > in cracking London's toughest cases. With a sharp nose and an even sharper mind, I specialize in surveillance,
-      mystery solving, and bringing truth to light.
+      My name is Sherlock Doggs, a private investigator with an exceptional nose — and an even better sense of humor.  
+      From missing socks to stolen tuna sandwiches, no mystery is too small or too weird for me to sniff out.  
+      When others give up, I dig in (literally, sometimes into the garden).
     </p>
-    <p>
-      My skills include:
-    </p>
+
+    <h3>🧠 My Skills:</h3>
     <ul>
-      <li>Advanced tracking and scent detection</li>
-      <li>Expert observation and deduction</li>
-      <li>Interrogation with a calm and friendly approach</li>
-      <li>Utilizing modern technology for investigations</li>
+      <li>👃 <strong>Super Sniffer:</strong> I can detect 87 types of guilt and 43 brands of sausages. Sometimes simultaneously.</li>
+      <li>👂 <strong>Ears Like a Hawk (but furrier):</strong> I hear whispers three blocks away — especially if they mention treats.</li>
+      <li>🕵️ <strong>Instincts Sharper Than My Teeth:</strong> Lies, secrets, and hidden snacks — nothing escapes me.</li>
+      <li>🐾 <strong>Master of Observation:</strong> I sit. I stare. I judge. Mostly the mailman.</li>
     </ul>
-    <p>
-      Based in London, I am always ready to take on challenging cases that require persistence, intelligence, and a
-      touch of canine intuition.
-    </p>
-  </section>
 
-  <section aria-label="Contact Information">
-    <h2>Contact Me</h2>
-    <p class="contacts">
-      <i class="fas fa-phone"></i> +44 20 7946 0958
-    </p>
-    <p class="contacts">
-      <i class="fas fa-envelope"></i> sherlock.doggs@detective.co.uk
-    </p>
-    <p class="contacts">
-      <i class="fas fa-map-marker-alt"></i> Baker Street, London, UK
-    </p>
-  </section>
+    <h3>📬 Contact Me:</h3>
+    <ul>
+      <li>🐾 <strong>Barking hours:</strong> 9am–7pm (unless I'm chasing squirrels)</li>
+      <li>📞 <strong>Phone:</strong> +44 123 456 789</li>
+      <li>📧 <strong>Email:</strong> sherlock@doggsdetective.com</li>
+      <li>📍 <strong>Location:</strong> 221B Barking Street, London</li>
+    </ul>
 
-  <section aria-label="Hobbies and how they help">
-    <h2>Hobbies &amp; How They Help My Work</h2>
-    <div class="hobbies">
-      <article class="hobby" tabindex="0">
-        <img src="images/Walking.jpeg" alt="Walking around London" />
-        <h3><i class="fas fa-walking"></i> Walking around London</h3>
-        <p>Exploring diverse neighborhoods trains my senses and helps me spot unusual activities.</p>
-      </article>
-      <article class="hobby" tabindex="0">
-        <img src="images/Reading.jpeg" alt="Reading books" />
-        <h3><i class="fas fa-book"></i> Reading books</h3>
-        <p>Studying psychology and criminology sharpens my understanding of human behavior.</p>
-      </article>
-      <article class="hobby" tabindex="0">
-        <img src="images/Chess.jpeg" alt="Playing chess" />
-        <h3><i class="fas fa-chess"></i> Playing chess</h3>
-        <p>Strategic thinking from chess helps me plan my investigations effectively.</p>
-      </article>
-    </div>
-  </section>
-</main>
-<footer>
-  &copy; 2025 Sherlock Doggs Detective Agency
-</footer>
+    <h3>🎾 My Hobbies (That Help My Work):</h3>
+    <ul>
+      <li><strong>Walking around London:</strong> I know every suspicious corner and where the best snacks are stashed.</li>
+      <li><strong>Reading books:</strong> Especially crime novels — my tail wags hardest at plot twists.</li>
+      <li><strong>Playing chess:</strong> I think five moves ahead... and sometimes chew the pawns if I lose.</li>
+    </ul>
+
+    <p><em>"Every hobby sharpens the mind — and sometimes, the teeth."</em></p>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Sherlock Doggs Investigations
+  </div>
 </body>
 </html>

@@ -1,46 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sherlock Doggs - About Me</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a2e0e6e6c5.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sherlock Doggs - About Me</title>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<style>
+  body {
+    margin: 0;
+    background-color: #121212;
+    color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+  }
+  header {
+    background-color: #000;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header h1 {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: 1.5px;
+  }
+  header h1 i {
+    color: #ffa500;
+  }
+  nav a {
+    color: #eee;
+    margin-left: 1.8rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #ffa500;
+  }
+  main {
+    max-width: 900px;
+    margin: 2rem auto 4rem;
+    padding: 0 1.2rem;
+  }
+  .profile-img {
+    width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #ffa500;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .about p {
+    font-size: 1.1rem;
+  }
+  .hobbies {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .hobby {
+    flex: 1 1 250px;
+    background: #222;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255,165,0,0.4);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  .hobby:hover {
+    transform: scale(1.05);
+  }
+  .hobby img {
+    width: 100%;
+    max-width: 160px;
+    border-radius: 10px;
+    margin-bottom: 0.7rem;
+    box-shadow: 0 0 10px #ffa500;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1><i class="fas fa-dog"></i> Sherlock Doggs</h1>
-    <nav>
-      <a href="index.html">About Me</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="case.html">Blog</a>
-    </nav>
-  </header>
-  <main>
-    <section class="about">
-      <img src="images/Detective.jpeg" alt="Detective" class="profile-img" />
-      <h2>About Me</h2>
-      <p>Hello! I’m <strong>Sherlock Doggs</strong>, a private detective with a nose for mysteries.</p>
-      <p><strong>Skills:</strong> sniffing out clues, tailing suspects, solving the unsolvable.</p>
-      <p><strong>Contact:</strong> doggdetective@barkmail.com | +44 777 123 4567</p>
-    </section>
-    <section class="hobbies">
-      <h2>Hobbies That Help Me Work</h2>
-      <div class="hobby">
-        <img src="images/Walking.jpeg" alt="Walking">
-        <p><strong>Walking around London</strong> keeps my senses sharp and my paws fit.</p>
-      </div>
-      <div class="hobby">
-        <img src="images/Reading.jpeg" alt="Reading">
-        <p><strong>Reading books</strong> gives me insights into criminal minds.</p>
-      </div>
-      <div class="hobby">
-        <img src="images/Chess.jpeg" alt="Chess">
-        <p><strong>Playing chess</strong> trains my strategy and patience.</p>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Sherlock Doggs</p>
-  </footer>
+<header>
+  <h1><i class="fas fa-dog"></i> Sherlock Doggs</h1>
+  <nav>
+    <a href="index.html"><i class="fas fa-user"></i> About Me</a>
+    <a href="reviews.html"><i class="fas fa-comments"></i> Reviews</a>
+    <a href="case.html"><i class="fas fa-blog"></i> Blog</a>
+  </nav>
+</header>
+<main>
+  <img src="images/Detective.jpeg" alt="Sherlock Doggs" class="profile-img" />
+  <section class="about">
+    <p>Hello! I'm Sherlock Doggs, your dedicated private detective with a keen nose for solving mysteries in London and beyond.</p>
+    <p>My skills include tracking, observation, and deduction. I combine my sharp instincts with some unique hobbies that sharpen my mind and keep me sharp:</p>
+  </section>
+  <section class="hobbies">
+    <div class="hobby">
+      <img src="images/Walking.jpeg" alt="Walking around London" />
+      <h3><i class="fas fa-walking"></i> Walking around London</h3>
+      <p>Exploring the streets helps me notice details others might miss.</p>
+    </div>
+    <div class="hobby">
+      <img src="images/Reading.jpeg" alt="Reading books" />
+      <h3><i class="fas fa-book"></i> Reading books</h3>
+      <p>Expanding my knowledge and learning about human nature improves my case-solving skills.</p>
+    </div>
+    <div class="hobby">
+      <img src="images/Chess.jpeg" alt="Playing chess" />
+      <h3><i class="fas fa-chess"></i> Playing chess</h3>
+      <p>Strategic thinking from chess helps me plan my investigations carefully.</p>
+    </div>
+  </section>
+</main>
 </body>
 </html>

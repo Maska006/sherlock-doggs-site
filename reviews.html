@@ -2,120 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Sherlock Doggs - Client Reviews</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sherlock Doggs — Client Reviews</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9fafc;
-      color: #222;
-      margin: 0; padding: 0;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+      background: #f9fbfc;
+      color: #2d3a45;
     }
     header {
-      background-color: #2d3436;
-      color: white;
-      padding: 1rem 2rem;
       text-align: center;
-      font-size: 2rem;
-      letter-spacing: 2px;
-      font-weight: bold;
+      margin-bottom: 30px;
+      color: #34495e;
+    }
+    header h1 {
+      font-size: 2.5rem;
     }
     nav {
-      background: #0984e3;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      padding: 0.5rem;
+      text-align: center;
+      margin-bottom: 30px;
     }
     nav a {
-      color: white;
+      margin: 0 18px;
       text-decoration: none;
       font-weight: 600;
-      padding: 0.4rem 0.8rem;
-      border-radius: 5px;
-      transition: background-color 0.3s;
+      color: #2980b9;
+      font-size: 1.1rem;
+      transition: color 0.3s;
     }
     nav a:hover {
-      background-color: #74b9ff;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #0984e3;
-      margin-top: 0;
-      margin-bottom: 1.5rem;
+      color: #1abc9c;
+      text-decoration: underline;
     }
     .review {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 25px;
       display: flex;
+      gap: 18px;
       align-items: center;
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 1rem;
     }
     .review img {
       width: 90px;
-      height: 90px;
       border-radius: 50%;
-      margin-right: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border: 2px solid #1abc9c;
       object-fit: cover;
+      flex-shrink: 0;
     }
     .review-content {
-      max-width: 750px;
+      flex-grow: 1;
     }
-    .review-content strong {
-      font-size: 1.2rem;
-      color: #2d3436;
+    .review-content h3 {
+      margin: 0 0 10px 0;
+      color: #16a085;
     }
     .review-content p {
-      margin: 0.2rem 0 0 0;
-      font-style: italic;
-      font-size: 1.1rem;
-      color: #555;
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #3a3a3a;
     }
   </style>
 </head>
 <body>
-  <header><i class="fa-solid fa-dog"></i> Sherlock Doggs</header>
-  <nav>
-    <a href="index.html">About Me</a>
-    <a href="reviews.html">Client Reviews</a>
-    <a href="case.html">Blog</a>
-  </nav>
+  <header>
+    <h1><i class="fa-solid fa-comments"></i> Client Reviews</h1>
+    <nav>
+      <a href="index.html">About Me</a>
+      <a href="reviews.html">Client Reviews</a>
+      <a href="case.html">Blog</a>
+    </nav>
+  </header>
+
   <main>
-    <h2>What My Clients Say</h2>
-
-    <div class="review">
-      <img src="images/Cat.jpg" alt="Mr. Whiskers the Cat" />
+    <section class="review">
+      <img src="images/Cat.jpg" alt="Whiskers the Cat" />
       <div class="review-content">
-        <strong>Mr. Whiskers, Cat</strong>
-        <p>"Sherlock Doggs found out who kept stealing my tuna! Now I can nap in peace without worries."</p>
+        <h3>Whiskers the Cat</h3>
+        <p>
+          "Sherlock Doggs saved me from the case of the disappearing catnip! Thanks to his keen sense, the mystery was solved in no time. Highly recommended for any curious feline."
+        </p>
       </div>
-    </div>
+    </section>
 
-    <div class="review">
+    <section class="review">
       <img src="images/Lizard.jpg" alt="Lizzy the Lizard" />
       <div class="review-content">
-        <strong>Lizzy, Lizard</strong>
-        <p>"Thanks to Sherlock Doggs, I finally know why my sunbathing spot was mysteriously shaded. A crafty spider was the culprit!"</p>
+        <h3>Lizzy the Lizard</h3>
+        <p>
+          "I thought my missing sunbathing spot was lost forever until Sherlock sniffed it out. His detective skills are unmatched in the reptile community!"
+        </p>
       </div>
-    </div>
+    </section>
 
-    <div class="review">
+    <section class="review">
       <img src="images/Parrot.jpg" alt="Polly the Parrot" />
       <div class="review-content">
-        <strong>Polly, Parrot</strong>
-        <p>"Squawk! Sherlock Doggs cracked the case of the missing crackers. Highly recommend for any feathered friends with problems!"</p>
+        <h3>Polly the Parrot</h3>
+        <p>
+          "When I kept repeating secrets I shouldn’t know, Sherlock cleverly cracked the case. Now, I’m a parrot of many talents thanks to his guidance!"
+        </p>
       </div>
-    </div>
-
+    </section>
   </main>
 </body>
 </html>
-

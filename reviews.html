@@ -1,48 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sherlock Doggs – Client Reviews</title>
+  <meta charset="UTF-8" />
+  <title>Sherlock Doggs - Client Reviews</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <style>
-    body { font-family: Arial, sans-serif; background-color: #fcfcfc; color: #333; }
-    header, footer { background-color: #333; color: white; text-align: center; padding: 1em; }
-    nav a { margin: 0 1em; color: white; text-decoration: none; }
-    section { padding: 2em; max-width: 800px; margin: auto; }
-    .review { margin-bottom: 2em; border-bottom: 1px solid #ccc; padding-bottom: 1em; }
-    img { max-width: 100px; float: left; margin-right: 1em; border-radius: 50%; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fafc;
+      color: #222;
+      margin: 0; padding: 0;
+    }
+    header {
+      background-color: #2d3436;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+    nav {
+      background: #0984e3;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #74b9ff;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #0984e3;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+    .review {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 1rem;
+    }
+    .review img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin-right: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      object-fit: cover;
+    }
+    .review-content {
+      max-width: 750px;
+    }
+    .review-content strong {
+      font-size: 1.2rem;
+      color: #2d3436;
+    }
+    .review-content p {
+      margin: 0.2rem 0 0 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #555;
+    }
   </style>
 </head>
 <body>
+  <header><i class="fa-solid fa-dog"></i> Sherlock Doggs</header>
+  <nav>
+    <a href="index.html">About Me</a>
+    <a href="reviews.html">Client Reviews</a>
+    <a href="case.html">Blog</a>
+  </nav>
+  <main>
+    <h2>What My Clients Say</h2>
 
-  <header>
-    <h1>Client Reviews</h1>
-    <nav>
-      <a href="index.html">About Me</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="case.html">Case of the Day</a>
-    </nav>
-  </header>
-
-  <section>
     <div class="review">
-      <img src="cat.jpg" alt="Client Cat">
-      <p><strong>Mr. Whiskers the Cat:</strong> My diamond-studded collar vanished! Sherlock sniffed out the culprit in hours – turned out I’d buried it in the litter box. Five meows out of five.</p>
+      <img src="images/Cat.jpg" alt="Mr. Whiskers the Cat" />
+      <div class="review-content">
+        <strong>Mr. Whiskers, Cat</strong>
+        <p>"Sherlock Doggs found out who kept stealing my tuna! Now I can nap in peace without worries."</p>
+      </div>
     </div>
 
     <div class="review">
-      <img src="lizard.jpg" alt="Client Lizard">
-      <p><strong>Lizzy the Lizard:</strong> I couldn’t find my heating lamp remote for days. Sherlock discovered it inside the sofa, guarded by a tribe of dust bunnies. Exceptional work.</p>
+      <img src="images/Lizard.jpg" alt="Lizzy the Lizard" />
+      <div class="review-content">
+        <strong>Lizzy, Lizard</strong>
+        <p>"Thanks to Sherlock Doggs, I finally know why my sunbathing spot was mysteriously shaded. A crafty spider was the culprit!"</p>
+      </div>
     </div>
 
     <div class="review">
-      <img src="parrot.jpg" alt="Client Parrot">
-      <p><strong>Captain Beaky the Parrot:</strong> Someone kept shouting rude words in my voice. Turned out to be a recording the hamster made. Sherlock solved the mystery without ruffling a feather!</p>
+      <img src="images/Parrot.jpg" alt="Polly the Parrot" />
+      <div class="review-content">
+        <strong>Polly, Parrot</strong>
+        <p>"Squawk! Sherlock Doggs cracked the case of the missing crackers. Highly recommend for any feathered friends with problems!"</p>
+      </div>
     </div>
-  </section>
 
-  <footer>
-    &copy; 2025 Sherlock Doggs Investigations
-  </footer>
-
+  </main>
 </body>
 </html>
+

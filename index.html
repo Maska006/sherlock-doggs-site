@@ -2,107 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Sherlock Doggs - About Me</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sherlock Doggs — About Me</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
       background: #f0f4f8;
       color: #222;
-      margin: 0; padding: 0;
     }
     header {
-      background-color: #2d3436;
-      color: white;
-      padding: 1rem 2rem;
       text-align: center;
-      font-size: 2rem;
-      letter-spacing: 2px;
-      font-weight: bold;
+      margin-bottom: 25px;
+      color: #2c3e50;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 5px;
     }
     nav {
-      background: #0984e3;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      padding: 0.5rem;
+      text-align: center;
+      margin-bottom: 40px;
     }
     nav a {
-      color: white;
+      margin: 0 18px;
       text-decoration: none;
       font-weight: 600;
-      padding: 0.4rem 0.8rem;
-      border-radius: 5px;
-      transition: background-color 0.3s;
+      color: #2980b9;
+      font-size: 1.1rem;
+      transition: color 0.3s;
     }
     nav a:hover {
-      background-color: #74b9ff;
+      color: #1abc9c;
+      text-decoration: underline;
     }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #0984e3;
-      margin-top: 0;
-      margin-bottom: 1.5rem;
+    .content {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     .profile-pic {
-      width: 200px;
+      max-width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+    }
+    .about-text {
+      max-width: 520px;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #34495e;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-top: 0;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #1abc9c;
+      padding-bottom: 5px;
+    }
+    ul.hobbies {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    ul.hobbies li {
+      text-align: center;
+      max-width: 120px;
+    }
+    ul.hobbies img {
+      width: 100px;
       border-radius: 10px;
-      display: block;
-      margin: 0 auto 1.5rem auto;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      margin-bottom: 8px;
     }
-    .skills, .hobbies {
-      margin-bottom: 1.5rem;
+    .contact {
+      margin-top: 25px;
+      font-size: 1rem;
+      color: #555;
+      text-align: center;
     }
-    .hobbies img {
-      width: 120px;
-      margin-right: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      vertical-align: middle;
+    .contact i {
+      color: #1abc9c;
+      margin-right: 8px;
     }
   </style>
 </head>
 <body>
-  <header><i class="fa-solid fa-dog"></i> Sherlock Doggs</header>
-  <nav>
-    <a href="index.html">About Me</a>
-    <a href="reviews.html">Client Reviews</a>
-    <a href="case.html">Blog</a>
-  </nav>
-  <main>
-    <h2>About Sherlock Doggs</h2>
+  <header>
+    <h1><i class="fa-solid fa-magnifying-glass"></i> Sherlock Doggs</h1>
+    <nav>
+      <a href="index.html">About Me</a>
+      <a href="reviews.html">Client Reviews</a>
+      <a href="case.html">Blog</a>
+    </nav>
+  </header>
+
+  <main class="content">
     <img src="images/Detective.jpg" alt="Sherlock Doggs" class="profile-pic" />
-    <p>Hello! I'm Sherlock Doggs, a private detective with a keen nose and sharp mind. I specialize in solving mysterious cases across London.</p>
-    <div class="skills">
-      <h3><i class="fa-solid fa-magnifying-glass"></i> Skills</h3>
-      <ul>
-        <li>Expert tracking and scent detection</li>
-        <li>Sharp observation and deduction</li>
-        <li>Excellent communication with all kinds of animals</li>
-        <li>Discreet and reliable investigation methods</li>
+
+    <section class="about-text">
+      <h2>Who I Am</h2>
+      <p>
+        I’m Sherlock Doggs, a private detective with a keen nose and sharp mind.  
+        My skills include tracking clues, solving puzzles, and sniffing out the truth no matter where it hides.
+      </p>
+      <p>
+        I live and work in London, and my daily hobbies – walking around the city, reading detective novels, and playing chess – all help me stay sharp and ready for any mystery.
+      </p>
+
+      <h2>My Hobbies</h2>
+      <ul class="hobbies">
+        <li>
+          <img src="images/Walking.jpg" alt="Walking around London" />
+          <div>Walking around London</div>
+        </li>
+        <li>
+          <img src="images/Reading.jpg" alt="Reading books" />
+          <div>Reading books</div>
+        </li>
+        <li>
+          <img src="images/Chess.jpg" alt="Playing chess" />
+          <div>Playing chess</div>
+        </li>
       </ul>
-    </div>
-    <div class="hobbies">
-      <h3><i class="fa-solid fa-heart"></i> Hobbies & How They Help Me</h3>
-      <p>When I'm not on a case, I enjoy:</p>
-      <img src="images/Walking.jpg" alt="Walking around London" title="Walking around London" />
-      <img src="images/Reading.jpg" alt="Reading books" title="Reading books" />
-      <img src="images/Chess.jpg" alt="Playing chess" title="Playing chess" />
-      <p>Walking helps me notice subtle clues in the city streets, reading sharpens my mind and knowledge, and chess teaches me strategy and foresight—skills I use every day to crack cases!</p>
-    </div>
-    <div class="contact">
-      <h3><i class="fa-solid fa-envelope"></i> Contact Me</h3>
-      <p>Email: <a href="mailto:sherlock.doggs@example.com">sherlock.doggs@example.com</a></p>
-      <p>Phone: +44 20 7946 0958</p>
-    </div>
+
+      <h2>Contact Me</h2>
+      <p class="contact">
+        <i class="fa-solid fa-envelope"></i> sherlock.doggs@detective.com <br />
+        <i class="fa-solid fa-phone"></i> +44 20 7946 1234
+      </p>
+    </section>
   </main>
 </body>
 </html>
